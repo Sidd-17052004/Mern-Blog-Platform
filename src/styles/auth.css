@@ -1,0 +1,318 @@
+/* Auth Page Animations and Styling */
+
+/* Smooth page transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+}
+
+/* Input focus enhancement */
+@keyframes input-focus-ring {
+  from {
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+  }
+  to {
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+}
+
+/* Button press animation */
+@keyframes button-press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Checkbox checked animation */
+@keyframes checkbox-check {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Error shake animation */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Success checkmark animation */
+@keyframes success-bounce {
+  0% {
+    transform: scale(0) translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Utility classes */
+.auth-page-fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.auth-card-slide-in {
+  animation: slideInRight 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.auth-button-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-button-hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  pointer-events: none;
+}
+
+.auth-button-hover:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Input field enhancements */
+.auth-input-focus {
+  position: relative;
+}
+
+.auth-input-focus::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #4f46e5;
+  transition: width 0.3s ease;
+}
+
+.auth-input-focus:focus-within::after {
+  width: 100%;
+}
+
+/* Floating label animation */
+.auth-floating-label {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tab indicator animation */
+.auth-tab-indicator {
+  position: relative;
+  height: 2px;
+  background: #4f46e5;
+  animation: slideInRight 0.4s ease-out;
+}
+
+/* Feature card hover effect */
+.auth-feature-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 70, 229, 0.08);
+  transition: left 0.5s;
+}
+
+.auth-feature-card:hover::before {
+  left: 100%;
+}
+
+.auth-feature-card:hover {
+  transform: translateX(10px);
+}
+
+/* Stats counter animation */
+.auth-stat-counter {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #4f46e5;
+}
+
+/* Form validation states */
+.auth-form-error {
+  animation: shake 0.4s ease-in-out;
+  border-color: #f44336 !important;
+}
+
+.auth-form-success {
+  animation: success-bounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-color: #4caf50 !important;
+}
+
+/* Password strength indicator */
+.auth-strength-bar {
+  height: 4px;
+  border-radius: 2px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.auth-strength-bar--weak {
+  background-color: #f44336;
+}
+
+.auth-strength-bar--fair {
+  background-color: #ff9800;
+}
+
+.auth-strength-bar--good {
+  background-color: #ffc107;
+}
+
+.auth-strength-bar--strong {
+  background-color: #8bc34a;
+}
+
+/* Responsive design utilities */
+@media (max-width: 768px) {
+  .auth-page-fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .auth-card-slide-in {
+    animation: slideInRight 0.6s ease-out 0s forwards;
+    opacity: 0;
+  }
+
+  .auth-feature-card:hover {
+    transform: translateX(5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-stat-counter {
+    font-size: 1.4rem;
+  }
+
+  .auth-floating-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  .auth-page-dark {
+    background: #111827;
+  }
+
+  .auth-card-dark {
+    background-color: #0f3460;
+    color: #eaeaea;
+  }
+
+  .auth-input-dark {
+    background-color: #16213e;
+    color: #eaeaea;
+    border-color: #0f3460;
+  }
+
+  .auth-input-dark:focus {
+    background-color: #1a1a2e;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .auth-page {
+    display: none;
+  }
+}
