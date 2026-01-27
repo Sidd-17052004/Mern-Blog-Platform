@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "../utils/axios";
 import BlogCard from "../components/BlogCard";
 import { Container, Typography, Box, Button, Skeleton, Card, Grid } from "@mui/material";
@@ -15,7 +15,7 @@ const UserBlogs = () => {
   const { isDarkMode } = useTheme();
 
   //get user blogs
-  const getUserBlogs = async () => {
+  const getUserBlogs = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
@@ -40,7 +40,7 @@ const UserBlogs = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [navigate]);
 
   useEffect(() => {
     getUserBlogs();

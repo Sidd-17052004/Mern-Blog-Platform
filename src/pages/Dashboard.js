@@ -63,9 +63,7 @@ const Dashboard = () => {
         setLoading(true);
         const id = localStorage.getItem("userId");
         const storedUserName = localStorage.getItem("userName") || "";
-        const storedUserEmail = localStorage.getItem("userEmail") || "";
         setUserName(storedUserName || "Creator");
-        setUserEmail(storedUserEmail || "");
         
         const { data } = await axios.get(`/api/v1/blog/user-blog/${id}`);
         if (data?.success) {
