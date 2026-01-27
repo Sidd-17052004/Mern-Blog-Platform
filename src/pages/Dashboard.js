@@ -14,19 +14,12 @@ import {
   Skeleton,
   Avatar,
   TextField,
-  Chip,
   Stack,
   IconButton,
-  LinearProgress,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ArticleIcon from "@mui/icons-material/Article";
 import DraftsIcon from "@mui/icons-material/Drafts";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import SaveIcon from "@mui/icons-material/Save";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
@@ -56,7 +49,6 @@ const Dashboard = () => {
   const [draftTitle, setDraftTitle] = useState("");
   const [draftDesc, setDraftDesc] = useState("");
   const [userName, setUserName] = useState("Creator");
-  const [userEmail, setUserEmail] = useState("");
   const [drafts, setDrafts] = useState([]);
   const [stats, setStats] = useState({ totalViews: 0, totalLikes: 0, totalComments: 0 });
 
@@ -142,9 +134,6 @@ const Dashboard = () => {
     ? new Date(blogs[0].createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
     : "Never";
   const recentBlogs = blogs.slice(0, 5);
-
-  // Profile completion
-  const profileCompletion = 65;
 
   return (
     <Box

@@ -44,7 +44,7 @@ const UserBlogs = () => {
 
   useEffect(() => {
     getUserBlogs();
-  }, []);
+  }, [getUserBlogs]);
   
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>

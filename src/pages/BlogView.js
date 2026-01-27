@@ -44,7 +44,6 @@ const BlogView = () => {
   const [commentLoading, setCommentLoading] = useState(false);
   const { isDarkMode } = useTheme();
   const currentUserId = localStorage.getItem("userId");
-  const currentUserName = localStorage.getItem("userName");
 
   const getBlogDetail = useCallback(async () => {
     try {
@@ -179,7 +178,6 @@ const BlogView = () => {
   }
 
   const isOwner = blog.user?._id === currentUserId;
-  const readingTime = calculateReadingTime(blog.description);
 
   // Format description with markdown-like rendering
   const renderContent = (text) => {
