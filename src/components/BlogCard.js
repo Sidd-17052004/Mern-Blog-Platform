@@ -16,7 +16,7 @@ import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
 import { Box, IconButton, Chip, Stack, Divider } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import axios from "axios";
+import axios from "../utils/axios";
 import ConfirmDialog from "./ConfirmDialog";
 import { formatDate, calculateReadingTime, truncateText } from "../utils/helpers";
 import { useTheme } from "../context/ThemeContext";
@@ -423,3 +423,5 @@ export default function BlogCard({
     </>
   );
 }
+
+

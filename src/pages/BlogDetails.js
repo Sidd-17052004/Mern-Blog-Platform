@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import axios from "axios";
+import axios from "../utils/axios";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 import { 
@@ -310,3 +310,5 @@ const BlogDetails = () => {
 };
 
 export default BlogDetails;
+
+

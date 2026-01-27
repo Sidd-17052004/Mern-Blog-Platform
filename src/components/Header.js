@@ -20,7 +20,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../redux/store";
 import toast from "react-hot-toast";
 import { useTheme } from "../context/ThemeContext";
-import axios from "axios";
+import axios from "../utils/axios";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ArticleIcon from "@mui/icons-material/Article";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -466,3 +466,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

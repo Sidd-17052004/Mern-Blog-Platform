@@ -19,7 +19,7 @@ import LockIcon from "@mui/icons-material/Lock";
 import PersonIcon from "@mui/icons-material/Person";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import axios from "axios";
+import axios from "../utils/axios";
 import { useDispatch } from "react-redux";
 import { authActions } from "../redux/store";
 import toast from "react-hot-toast";
@@ -122,7 +122,6 @@ const AuthPage = () => {
         localStorage.setItem("userEmail", data?.user.email);
         if (data?.token) {
           localStorage.setItem("token", data.token);
-          axios.defaults.headers.common.Authorization = `Bearer ${data.token}`;
         }
         dispatch(authActions.login());
         toast.success("Welcome back! 🎉");
@@ -180,7 +179,6 @@ const AuthPage = () => {
         }
         if (data?.token) {
           localStorage.setItem("token", data.token);
-          axios.defaults.headers.common.Authorization = `Bearer ${data.token}`;
         }
         dispatch(authActions.login());
         toast.success("Welcome 🎉");
@@ -857,3 +855,5 @@ const AuthPage = () => {
 };
 
 export default AuthPage;
+
+

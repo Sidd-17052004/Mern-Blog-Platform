@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import axios from "axios";
+import axios from "../utils/axios";
 import { useTheme } from "../context/ThemeContext";
 import {
   Container,
@@ -492,4 +492,6 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
 

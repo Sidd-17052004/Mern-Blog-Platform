@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import axios from "axios";
+import axios from "../utils/axios";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { 
@@ -550,4 +550,6 @@ Tips:
 };
 
 export default CreateBlog;
+
+
 

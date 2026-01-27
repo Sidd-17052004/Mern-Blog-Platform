@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import toast from "react-hot-toast";
 import { useTheme } from "../context/ThemeContext";
-import axios from "axios";
+import axios from "../utils/axios";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import SaveIcon from "@mui/icons-material/Save";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -528,3 +528,5 @@ const EditProfile = () => {
 };
 
 export default EditProfile;
+
+

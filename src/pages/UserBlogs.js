@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "../utils/axios";
 import BlogCard from "../components/BlogCard";
 import { Container, Typography, Box, Button, Skeleton, Card, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -160,3 +160,5 @@ const UserBlogs = () => {
 };
 
 export default UserBlogs;
+
+

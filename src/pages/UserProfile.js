@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import axios from "axios";
+import axios from "../utils/axios";
 import { useTheme } from "../context/ThemeContext";
 import {
   Container,
@@ -264,3 +264,5 @@ const UserProfile = ({ userId }) => {
 };
 
 export default UserProfile;
+
+

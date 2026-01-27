@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import axios from "axios";
+import axios from "../utils/axios";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -570,3 +570,5 @@ const BlogView = () => {
 };
 
 export default BlogView;
+
+

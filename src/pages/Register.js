@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Typography, TextField, Button } from "@mui/material";
 import toast from "react-hot-toast";
-import axios from "axios";
+import axios from "../utils/axios";
 import { useTheme } from "../context/ThemeContext";
 import { useDispatch } from "react-redux";
 import { authActions } from "../redux/store";
@@ -197,3 +197,5 @@ const Register = () => {
 };
 
 export default Register;
+
+

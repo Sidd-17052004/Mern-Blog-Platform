@@ -9,7 +9,6 @@ import { store } from "./redux/store";
 import { ThemeProvider } from "./context/ThemeContext";
 import { ThemeProvider as MuiThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import axios from "axios";
 
 const muiTheme = createTheme({
   palette: {
@@ -36,11 +35,6 @@ const muiTheme = createTheme({
     borderRadius: 12,
   },
 });
-
-const token = localStorage.getItem("token");
-if (token) {
-  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
-}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
