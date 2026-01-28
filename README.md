@@ -8,8 +8,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-6.0+-47A248?style=flat-square&logo=mongodb)](https://www.mongodb.com)
 [![License](https://img.shields.io/badge/License-ISC-blue?style=flat-square)](LICENSE)
 
-**A full-stack blogging platform with secure authentication, real-time interactions, and responsive UI.**
-
+**A full-stack blogging platform built with modern web technologies, featuring real-time interactions, secure authentication, and a responsive UI.**
 [🚀 Live Demo](https://mern-blog-platform-beta.vercel.app) • [📚 API](https://blog-backend-teal-tau.vercel.app) • [🐛 Report Bug](https://github.com/Sidd-17052004/Mern-Blog-Platform/issues)
 
 </div>
