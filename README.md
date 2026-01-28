@@ -133,7 +133,6 @@ mern-stack-blog-app/
    - **Frontend:** `REACT_APP_API_URL`
 5. Redeploy to apply changes
 
-See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed steps.
 
 ---
 
