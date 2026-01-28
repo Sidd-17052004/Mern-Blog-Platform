@@ -1,4 +1,4 @@
-                                                           ## 📝 BlogHub - A Modern MERN Blogging Platform
+# 📝 BlogHub - A Modern MERN Blogging Platform
 
 <div align="center">
 
